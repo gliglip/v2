@@ -1,0 +1,9 @@
+-r common.txt
+
+pytest
+yapf
+flake8
+flakeplus
+isort
+pytest-cov
+pytest-django
