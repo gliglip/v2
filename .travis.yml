@@ -1,0 +1,14 @@
+sudo: false
+language: python
+python: 3.6
+install: "pip install -r requirements/dev.txt"
+script: "make test"
+after_success: codecov
+after_script: "flake8 && isort --check-only --recursive"
+notifications:
+  webhooks:
+    urls:
+      - https://webhooks.gitter.im/e/96fe756871cf1399efe6
+    on_success: change
+    on_failure: always
+    on_start: never

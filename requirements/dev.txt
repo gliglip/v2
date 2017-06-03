@@ -1,4 +1,9 @@
 -r common.txt
--r test.txt
 
+pytest
 yapf
+flake8
+flakeplus
+isort
+pytest-cov
+pytest-django
