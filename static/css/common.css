@@ -24,7 +24,7 @@ a img{
 
 .ts-header .mdl-menu__container {
   z-index: 50;
-  margin: 0 !important;
+  margin: 0;
 }
 
 
@@ -37,12 +37,12 @@ a img{
   right: 20%;
   bottom: -26px;
   z-index: 3;
-  background: #64ffda !important;
-  color: black !important;
+  background: #64ffda;
+  color: black;
 }
 
 .ts-mobile-title {
-  display: none !important;
+  display: none;
 }
 
 
@@ -58,7 +58,7 @@ a img{
 }
 
   .ts-header .material-icons {
-    color: #767777 !important;
+    color: #767777;
   }
 
   .ts-header .mdl-layout__drawer-button {
@@ -98,7 +98,7 @@ a img{
     display: inline-block;
     height: 60px;
     line-height: 68px;
-    background-color: transparent !important;
+    background-color: transparent;
     border-bottom: 4px solid transparent;
   }
 
@@ -306,11 +306,11 @@ a img{
 
 .ts-link {
   text-decoration: none;
-  color: #8bc34a !important;
+  color: #8bc34a;
 }
 
   .ts-link:hover {
-    color: #7cb342 !important;
+    color: #7cb342;
   }
 
   .ts-link .material-icons {
@@ -321,12 +321,12 @@ a img{
 
 .ts-alt-link {
   text-decoration: none;
-  color: #64ffda !important;
+  color: #64ffda;
   font-size: 16px;
 }
 
   .ts-alt-link:hover {
-    color: #00bfa5 !important;
+    color: #00bfa5;
   }
 
   .ts-alt-link .material-icons {
@@ -448,11 +448,11 @@ a img{
   }
 
   .ts-title {
-    display: none !important;
+    display: none;
   }
 
   .ts-mobile-title {
-    display: block !important;
+    display: block;
     position: absolute;
     left: calc(50% - 70px);
     top: 12px;
