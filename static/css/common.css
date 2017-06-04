@@ -22,7 +22,11 @@ a img {
   padding: 10px 0;
 }
 
-header.white {
+header.mdl-layout__header {
   background: white;
   color: rgb(118, 119, 119);
+}
+
+header .mdl-layout-icon {
+  height: 56px;
 }
