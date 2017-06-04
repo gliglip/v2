@@ -1,6 +1,6 @@
 from .base import *  # noqa
 
-DEBUG_PROPAGATE_EXCEPTIONS = True,
+DEBUG_PROPAGATE_EXCEPTIONS = True
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
