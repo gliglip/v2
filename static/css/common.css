@@ -8,16 +8,6 @@ a img {
   border: 0px;
 }
 
-::-moz-selection {
-  background-color: #6ab344;
-  color: #fff;
-}
-
-::selection {
-  background-color: #6ab344;
-  color: #fff;
-}
-
 .ts-footer {
   padding: 10px 0;
 }
@@ -29,4 +19,14 @@ header.mdl-layout__header {
 
 header .mdl-layout-icon {
   height: 56px;
+}
+
+.ts-layout--cursive {
+  font-family: 'Indie Flower', cursive;
+  font-size: 20px;
+}
+
+.ts-layout--cursive-big {
+  font-family: 'Indie Flower', cursive;
+  font-size: 36px
 }
