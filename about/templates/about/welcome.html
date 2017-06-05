@@ -1,1 +1,26 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block extrastyle %}
+  <link rel="stylesheet" href="{% static 'about/css/welcome.css' %}">
+{% endblock %}
+
+{% block navbar %}
+{% endblock %}
+
+{% block content %}
+  <div class="intro">
+    <div class="mdl-grid">
+      <h1 class="mdl-cell mdl-cell--6-col mdl-cell--2-offset">Toystori</h1>
+    </div>
+    <div class="mdl-grid">
+      <h4 class="mdl-cell mdl-cell--6-col mdl-cell--2-offset">Share your toys</h4>
+    </div>
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--4-col mdl-cell--2-offset">
+        A platform for children and parents to share toys that are now boring and borrow new ones!
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
