@@ -2,8 +2,8 @@ sudo: false
 language: python
 python: 3.6
 install: "pip install -r requirements/dev.txt"
-script: "make test"
-after_success: codecov
+script: "make test-codacy"
+after_success: python-codacy-coverage -r coverage.xml
 after_script: "flake8 && isort --check-only --recursive"
 notifications:
   webhooks:

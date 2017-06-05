@@ -7,3 +7,4 @@ flakeplus
 isort
 pytest-cov
 pytest-django
+codacy-coverage
