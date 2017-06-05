@@ -1,9 +1,5 @@
 .intro {
   /* background: url('/static/about/intro.jpg') center / cover; */
   background: url('https://storage.googleapis.com/toystori-v2-prod/www/images/bg_c.jpg') center / cover;
-  opacity: 0.8;
-}
-
-.intro + h2 {
-  margin-top: 10%;
+  opacity: 0.85;
 }
