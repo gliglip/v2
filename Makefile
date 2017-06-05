@@ -8,5 +8,8 @@ clean:
 test:
 	py.test
 
+test-codacy:
+	py.test --cov-report xml --cov .
+
 release:
 	python setup.py sdist bdist_wheel register upload -s
