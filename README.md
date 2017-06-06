@@ -9,8 +9,8 @@
 The recommended python version is 3.6.1
 
 ```
-$ python3 -m venv ./.env
-$ . ./.env/bin/activate
+$ python3 -m venv ~/.venv/toystori
+$ . ~/.venv/toystori/bin/activate
 $ pip install -r requirements/dev.txt
 
 # use the docker image for postgres with postgis
