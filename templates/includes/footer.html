@@ -1,3 +1,4 @@
+{% load static %}
 <footer class="ts-footer mdl-mini-footer">
   <div class="mdl-mini-footer__left-section">
     <div class="mdl-logo mdl-layout--large-screen-only">&copy; 2017 Toystori authors</div>
@@ -13,7 +14,7 @@
         </a>
       </li>
       <li>
-        <a class="mdl-button" href="#">About</a>
+        <a class="mdl-button" href="{% url 'about' %}">About</a>
       </li>
     </ul>
   </div>
