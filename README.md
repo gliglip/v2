@@ -14,7 +14,13 @@ $ . ./.env/bin/activate
 $ pip install -r requirements/dev.txt
 
 # use the docker image for postgres with postgis
-$ docker run -e POSTGRES_PASSWORD=1234 -e POSTGRES_DB=toystori_dev -p 5432:5432 -d mdillon/postgis:9.6-alpine
+$ docker volume create pgdata
+$ docker run \
+    -v pgdata:/var/lib/postgresql/data \
+    -e POSTGRES_PASSWORD=1234 \
+    -e POSTGRES_DB=toystori_dev \
+    -p 5432:5432 \
+    -d mdillon/postgis:9.6-alpine
 
 $ python manage.py runserver
 ```
