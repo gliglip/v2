@@ -11,5 +11,9 @@ test:
 test-codacy:
 	py.test --cov-report xml --cov .
 
+lint:
+	flake8
+	isort --check-only --recursive
+
 release:
 	python setup.py sdist bdist_wheel register upload -s
