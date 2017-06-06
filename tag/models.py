@@ -16,6 +16,10 @@ class Tag(models.Model):
         name = name.replace(',', ' ')
         return '-'.join(name.split())
 
+    # pylint doesn't like the method signature as it is different from
+    # how it is defined in django models, but this is the recommended signature
+    # https://docs.djangoproject.com/en/1.11/topics/db/models/#overriding-predefined-model-methods
+    # pylint: disable-msg=W0221
     def save(self, *args, **kwargs):
         self.code = self.normalize_name(self.display_name)
         return super(Tag, self).save(*args, **kwargs)
