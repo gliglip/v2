@@ -17,10 +17,6 @@ header.mdl-layout__header {
   color: rgb(118, 119, 119);
 }
 
-header .mdl-layout-icon {
-  height: 56px;
-}
-
 .ts-layout--cursive {
   font-family: 'Indie Flower', cursive;
   font-size: 20px;
@@ -29,4 +25,9 @@ header .mdl-layout-icon {
 .ts-layout--cursive-big {
   font-family: 'Indie Flower', cursive;
   font-size: 36px
+}
+
+.ts-title-link {
+  font-family: 'Indie Flower', cursive;
+  font-size: 28px
 }
