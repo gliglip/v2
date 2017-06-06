@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block extrastyle %}
+  <style>
+    #about {
+      max-width: 650px;
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+  <div id="about" class="mdl-grid">
+    <div class="mdl-grid">&nbsp;</div>
+    <h5 class="mdl-grid">
+      Toystori uses good engineering principles to ensure good
+      experience
+    </h5>
+    <ul class="mdl-list">
+      <li class="mdl-list__item mdl-list__item--three-line">
+        <span class="mdl-list__item-primary-content">
+          <i class="material-icons mdl-list__item-avatar">backup</i>
+          <span>Cloud</span>
+          <span class="mdl-list__item-text-body">
+            We use Google Cloud Platform for the servers
+          </span>
+        </span>
+      </li>
+      <li class="mdl-list__item mdl-list__item--three-line">
+        <span class="mdl-list__item-primary-content">
+          <i class="material-icons mdl-list__item-avatar">https</i>
+          <span>Secure</span>
+          <span class="mdl-list__item-text-body">
+            The data is safe and secure on Google SQL
+          </span>
+        </span>
+      </li>
+      <li class="mdl-list__item mdl-list__item--three-line">
+        <span class="mdl-list__item-primary-content">
+          <i class="material-icons mdl-list__item-avatar">favorite</i>
+          <span>Free</span>
+          <span class="mdl-list__item-text-body">
+            The project is free to use and <a href="https://github.com/toystori/v2">open source</a>. It means,
+            the code can be (has been) audited.
+          </span>
+        </span>
+      </li>
+    </ul>
+  </div>
+{% endblock %}
