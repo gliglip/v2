@@ -1,5 +1,5 @@
-from django.db import models
 from django.contrib.gis.db.models import GeometryField
+from django.db import models
 
 
 class Toy(models.Model):
