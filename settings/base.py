@@ -85,7 +85,7 @@ DATABASES = {
         'PORT': os.environ.get('PG_PORT', '5432'),
         'USER': os.environ.get('PG_USERNAME', 'postgres'),
         'NAME': os.environ.get('PG_DATABASE', 'toystori_dev'),
-        'PASSWORD': os.environ.get('PG_DATABASE', '1234'),
+        'PASSWORD': os.environ.get('PG_PASSWORD', '1234'),
         'TEST': {
             'NAME': 'toystori_test',
         },
