@@ -37,8 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.gis',
     'about',
     'tag',
+    'toy',
 ]
 
 MIDDLEWARE = [
@@ -78,12 +80,12 @@ WSGI_APPLICATION = 'settings.wsgi.application'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'HOST': os.environ.get('PG_HOST', 'localhost'),
         'PORT': os.environ.get('PG_PORT', '5432'),
         'USER': os.environ.get('PG_USERNAME', 'postgres'),
         'NAME': os.environ.get('PG_DATABASE', 'toystori_dev'),
-        'PASSWORD': os.environ.get('PG_DATABASE', '1234'),
+        'PASSWORD': os.environ.get('PG_PASSWORD', '1234'),
         'TEST': {
             'NAME': 'toystori_test',
         },

@@ -1,16 +1,21 @@
+dist: trusty
 sudo: false
 language: python
 python: 3.6
-install: "pip install -r requirements/dev.txt"
+env:
+  - PG_PASSWORD=''
+install:
+  - 'pip install -r requirements/dev.txt'
+addons:
+  postgresql: '9.6'
+services:
+  - postgresql
+before_script:
+  - psql -U postgres -c 'create database toystori_test;'
+  - psql -U postgres -c 'create extension postgis;'
 script:
   - make test-codacy
   - flake8
   - isort --check-only --recursive
-after_success: python-codacy-coverage -r coverage.xml
-notifications:
-  webhooks:
-    urls:
-      - https://webhooks.gitter.im/e/96fe756871cf1399efe6
-    on_success: change
-    on_failure: always
-    on_start: never
+after_success:
+  - python-codacy-coverage -r coverage.xml

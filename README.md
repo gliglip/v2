@@ -13,6 +13,9 @@ $ python3 -m venv ~/.venv/toystori
 $ . ~/.venv/toystori/bin/activate
 $ pip install -r requirements/dev.txt
 
+# Install GeoDjango dependencies
+$ brew install gdal libgeoip
+
 # use the docker image for postgres with postgis
 $ docker volume create pgdata
 $ docker run \
