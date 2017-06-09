@@ -1,6 +1,6 @@
-from django.views.generic.edit import UpdateView
-from django.views.generic import ListView
 from django.urls import reverse_lazy
+from django.views.generic import ListView
+from django.views.generic.edit import UpdateView
 
 from .models import Toy
 
