@@ -33,7 +33,9 @@ $ python manage.py runserver
 Tests are run with py.test. 
 
 ```
-$ make test
+# run with output
+$ py.test -s
 
-$ py.test --cov .
+# run with coverage (used by ci)
+py.test --cov-report xml --cov .
 ```
