@@ -20,6 +20,7 @@ from about.views import WelcomeView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^about/', include('about.urls')),
+    url(r'^about/', include('about.urls', namespace='about')),
+    url(r'^toy/', include('toy.urls', namespace='toy')),
     url(r'^$', WelcomeView.as_view(), name='home'),
 ]

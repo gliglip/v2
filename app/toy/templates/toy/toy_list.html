@@ -1,0 +1,14 @@
+{% load static %}
+
+<h1>Toys</h1>
+<ul>
+{% for toy in object_list %}
+    <li>
+      <a href="{% url 'toy:edit' toy.id %}">{{ toy.title }}</a>
+      {{ toy.description }}
+      {{ toy.location }}
+    </li>
+{% empty %}
+    <li>No toys yet.</li>
+{% endfor %}
+</ul>
