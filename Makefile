@@ -1,19 +1,15 @@
-.PHONY: clean release test
+.PHONY: clean test test-codacy lint
 
 clean:
 	find . -type f -name '*.py[co]' -delete
 	find . -type d -name '__pycache__' -delete
-	rm -rf .tox
 
 test:
-	py.test
+	cd app; py.test
 
 test-codacy:
-	py.test --cov-report xml --cov .
+	cd app; py.test --cov-report xml --cov .
 
 lint:
-	flake8
+	cd app; flake8
 	isort --check-only --recursive
-
-release:
-	python setup.py sdist bdist_wheel register upload -s
