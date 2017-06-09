@@ -1,4 +1,4 @@
-# v2
+# Toystori v2
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/b03ea0563d9d49ccaa12713d61989ceb)](https://www.codacy.com/app/caulagi/v2?utm_source=github.com&utm_medium=referral&utm_content=toystori/v2&utm_campaign=badger)
 [![Build Status](https://travis-ci.org/toystori/v2.svg?branch=master)](https://travis-ci.org/toystori/v2)
@@ -8,7 +8,7 @@
 
 The recommended python version is 3.6.1
 
-```
+```bash
 $ python3 -m venv ~/.venv/toystori
 $ . ~/.venv/toystori/bin/activate
 $ pip install -r requirements/dev.txt
@@ -32,7 +32,7 @@ $ python manage.py runserver
 
 Tests are run with py.test. 
 
-```
+```bash
 # run with output
 $ py.test -s
 
