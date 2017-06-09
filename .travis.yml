@@ -13,8 +13,9 @@ services:
 before_script:
   - psql -U postgres -c 'create database toystori_test;'
   - psql -U postgres -c 'create extension postgis;'
+  - cd app
 script:
-  - make test-codacy
+  - py.test --cov-report xml --cov .
   - flake8
   - isort --check-only --recursive
 after_success:
