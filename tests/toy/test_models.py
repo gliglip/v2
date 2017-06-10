@@ -1,7 +1,7 @@
 from django.contrib.gis.geos import Point
 from django.test import TestCase
 
-from .models import Toy
+from toy.models import Toy
 
 
 class ToyModelTest(TestCase):

@@ -1,4 +1,4 @@
-from .models import Tag
+from tag.models import Tag
 
 
 def test_display_name_conversion():
