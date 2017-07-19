@@ -11,8 +11,8 @@ addons:
 services:
   - postgresql
 before_script:
-  - psql -U postgres -c 'create database toystori_test;'
-  - psql -U postgres -c 'create extension postgis;'
+  - psql -U postgres -c 'create database toystori_test'
+  - psql -U postgres -c 'create extension postgis'
 script:
   - py.test --cov-report xml --cov .
   - flake8
