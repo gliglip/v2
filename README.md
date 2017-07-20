@@ -7,6 +7,8 @@
 ## Development setup
 
 
+#### Database setup
+
 ```bash
 # use the docker image for postgres with postgis
 $ docker volume create pgdata
@@ -18,7 +20,7 @@ $ docker run \
     -d mdillon/postgis:9.6-alpine
 ```
 
-### Running application with docker
+#### Running application with docker
 
 ```bash
 $ docker build -t toystori-v2 .
@@ -31,7 +33,7 @@ $ docker run  --add-host=docker:${HOSTIP} -p 9090:9090 --rm -it toystori-v2
 
 **Note** - Application is listening on port 9090
 
-### Running application with docker
+#### Running application locally
 
 The recommended python version is **3.6.1**
 
