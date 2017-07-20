@@ -14,9 +14,9 @@ RUN apt-get update \
 RUN pip3 install -r /tmp/prod.txt
 
 COPY . /code
-WORKDIR /code
+WORKDIR /code/app
 
 ENV PG_HOST docker
 ENV DJANGO_SETTINGS_MODULE settings.prod
 
-CMD ["python", "app/manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["uwsgi", "--ini", "uwsgi.ini"]

@@ -6,16 +6,10 @@
 
 ## Development setup
 
-The recommended python version is 3.6.1
+
+#### Database setup
 
 ```bash
-$ python3 -m venv ~/.venv/toystori
-$ . ~/.venv/toystori/bin/activate
-$ pip install -r requirements/dev.txt
-
-# Install GeoDjango dependencies
-$ brew install gdal libgeoip
-
 # use the docker image for postgres with postgis
 $ docker volume create pgdata
 $ docker run \
@@ -24,6 +18,32 @@ $ docker run \
     -e POSTGRES_DB=toystori_dev \
     -p 5432:5432 \
     -d mdillon/postgis:9.6-alpine
+```
+
+#### Running application with docker
+
+```bash
+$ docker build -t toystori-v2 .
+
+# mac only
+$ HOSTIP=`ifconfig en0 | grep inet | grep -v inet6 | cut -d ' ' -f2`
+
+$ docker run  --add-host=docker:${HOSTIP} -p 9090:9090 --rm -it toystori-v2
+```
+
+**Note** - Application is listening on port 9090
+
+#### Running application locally
+
+The recommended python version is **3.6.1**
+
+```
+$ python3 -m venv ~/.venv/toystori
+$ . ~/.venv/toystori/bin/activate
+$ pip install -r requirements/dev.txt
+
+# Install GeoDjango dependencies
+$ brew install gdal libgeoip
 
 $ python app/manage.py runserver
 ```
