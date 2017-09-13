@@ -3,16 +3,22 @@
 
 
 {% block content %}
-  <h1>Toys</h1>
+  <div class="mdl-grid">
+    <h1>Toys</h1>
+  </div>
   <ul>
-  {% for toy in object_list %}
-    <li>
-      <a href="{% url 'toy:edit' toy.id %}">{{ toy.title }}</a>
-      {{ toy.description }}
-      {{ toy.location }}
-    </li>
-  {% empty %}
-    <li>No toys yet.</li>
-  {% endfor %}
+    {% for toy in object_list %}
+      <div class="mdl-grid">
+        <li>
+          <a href="{% url 'toy:edit' toy.id %}">{{ toy.title }}</a>
+          {{ toy.description }}
+          {{ toy.location }}
+        </li>
+      </div>
+    {% empty %}
+      <div class="mdl-grid">
+        <li>No toys yet.</li>
+      </div>
+    {% endfor %}
   </ul>
 {% endblock %}
