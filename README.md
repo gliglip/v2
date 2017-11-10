@@ -34,7 +34,7 @@ $ export HOSTIP=127.0.0.1
 $ docker run  --add-host=docker:${HOSTIP} -p 9090:9090 --rm -it toystori-v2
 ```
 
-**Note** - Application is listening on port 9090
+**Note** - See the application [here](http://localhost:9090/)
 
 #### Running application locally
 
