@@ -25,8 +25,11 @@ $ docker run \
 ```bash
 $ docker build -t toystori-v2 .
 
-# mac only
-$ HOSTIP=`ifconfig en0 | grep inet | grep -v inet6 | cut -d ' ' -f2`
+# docker for mac
+$ export HOSTIP=192.168.65.1
+
+# linux
+$ export HOSTIP=127.0.0.1
 
 $ docker run  --add-host=docker:${HOSTIP} -p 9090:9090 --rm -it toystori-v2
 ```
