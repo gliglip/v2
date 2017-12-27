@@ -48,6 +48,7 @@ $ pip install -r requirements/dev.txt
 # Install GeoDjango dependencies
 $ brew install gdal libgeoip
 
+$ python app/manage.py migrate
 $ python app/manage.py runserver
 ```
 
