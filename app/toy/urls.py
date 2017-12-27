@@ -1,8 +1,9 @@
-from django.conf.urls import url
+from django.urls import path
 
 from . import views
 
+app_name = 'toy'
 urlpatterns = [
-    url(r'^(?P<pk>[0-9]+)/$', views.ToyEditView.as_view(), name='edit'),
-    url(r'^$', views.ToyListView.as_view(), name='list'),
+    path('<int:pk>/', views.ToyEditView.as_view(), name='edit'),
+    path('', views.ToyListView.as_view(), name='list'),
 ]
