@@ -2,4 +2,5 @@
   /* background: url('/static/about/intro.jpg') center / cover; */
   background: url('https://storage.googleapis.com/toystori-v2-prod/www/images/bg_c.jpg') center / cover;
   opacity: 0.85;
+  min-height: 400px;
 }

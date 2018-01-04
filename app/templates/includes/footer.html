@@ -1,23 +1,28 @@
 {% load static %}
-<footer class="ts-footer mdl-mini-footer">
-  <div class="mdl-mini-footer__left-section">
-    <div class="mdl-logo mdl-layout--large-screen-only">
-      <i class="far fa-copyright"></i> 2018 Toystori authors
+<footer class="mdl-mega-footer">
+  <div class="mdl-mega-footer__middle-section">
+
+    <div class="mdl-mega-footer__drop-down-section">
+      <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+      <h1 class="mdl-mega-footer__heading">Product</h1>
+      <ul class="mdl-mega-footer__link-list">
+        <li><a href="{% url 'about:about' %}">About</a></li>
+      </ul>
     </div>
-    <ul class="mdl-mini-footer__link-list">
-      <li>
-        <a href="https://www.facebook.com/Toystori-761940260497219/" class="mdl-button">
-          <i class="fab fa-facebook-f fa-lg"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://twitter.com/iamtoystori/" class="mdl-button">
-          <i class="fab fa-twitter fa-lg"></i>
-        </a>
-      </li>
-      <li>
-        <a class="mdl-button" href="{% url 'about:about' %}">About</a>
-      </li>
-    </ul>
+
+    <div class="mdl-mega-footer__drop-down-section">
+      <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+      <h1 class="mdl-mega-footer__heading">Social media</h1>
+      <ul class="mdl-mega-footer__link-list">
+        <li><a href="https://www.facebook.com/Toystori-761940260497219/">Facebook</a></li>
+        <li><a href="https://twitter.com/iamtoystori/">Twitter</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mdl-mega-footer__bottom-section">
+    <div class="mdl-logo">
+       <i class="far fa-copyright"></i> 2018 Toystori authors
+    </div>
   </div>
 </footer>
