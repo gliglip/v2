@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
-{% load static %}
-
+{% load i18n static %}
 
 {% block content %}
   <div class="mdl-grid">
@@ -17,7 +16,7 @@
       </div>
     {% empty %}
       <div class="mdl-grid">
-        <li>No toys yet.</li>
+        <li>{% trans "No toys yet." %}</li>
       </div>
     {% endfor %}
   </ul>

@@ -22,7 +22,7 @@
     {% endblock %}
 
     {% block common_css %}
-      <link rel="stylesheet" href="{% static 'css/common.css' %}">
+      <link rel="stylesheet" href="{% static "css/common.css" %}">
     {% endblock %}
 
     {% block extrastyle %}
@@ -37,7 +37,7 @@
     {% block all_content %}
       <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         {% block navbar %}
-          {% include 'includes/navbar.html' %}
+          {% include "includes/navbar.html" %}
         {% endblock %}
 
         {% block messages %}
@@ -52,7 +52,7 @@
         {% endblock %}
 
         {% block footer %}
-          {% include 'includes/footer.html' %}
+          {% include "includes/footer.html" %}
         {% endblock %}
       </div>
     {% endblock all_content %}

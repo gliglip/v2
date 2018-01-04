@@ -1,8 +1,8 @@
-{% extends 'base.html' %}
-{% load static %}
+{% extends "base.html" %}
+{% load i18n static %}
 
 {% block extrastyle %}
-  <link rel="stylesheet" href="{% static 'about/css/welcome.css' %}">
+  <link rel="stylesheet" href="{% static "about/css/welcome.css" %}">
 {% endblock %}
 
 {% block navbar %}
@@ -18,12 +18,12 @@
     </div>
     <div class="mdl-grid">
       <h4 class="ts-layout--cursive-big mdl-cell mdl-cell--6-col mdl-cell--1-offset-desktop">
-        Share your toys
+        {% trans "Share your toys" %}
       </h4>
     </div>
     <div class="mdl-grid">
       <p class="ts-layout--cursive mdl-cell mdl-cell--6-col mdl-cell--1-offset-desktop">
-        A platform for children and parents to share toys that are now boring and borrow new ones!
+        {% trans "A platform for children and parents to share toys and make new friends!" %}
       </p>
     </div>
   </div>
