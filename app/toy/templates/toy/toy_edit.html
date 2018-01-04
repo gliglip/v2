@@ -1,11 +1,17 @@
-{% extends 'base.html' %}
-{% load static %}
+{% extends "base.html" %}
+{% load i18n static %}
 
 {% block content %}
   <div class="mdl-grid">
     <form action="" method="post">
       {% csrf_token %}
-      {{ form.errors }}
+      {% if form.non_field_errors %}
+        {{ form.errors }}
+      {% elif form.errors %}
+        <div class="mdl-grid mdl_textfield__error">
+          {% trans "Please correct the errors below" %}
+        </div>
+      {% endif %}
       <div class="mdl-grid">
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label {% if form.title.errors %}is-invalid{% endif %}">
           <input class="mdl-textfield__input" type="text" id="{{ form.title.id_for_label }}"
