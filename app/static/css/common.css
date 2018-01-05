@@ -27,3 +27,7 @@ header.mdl-layout__header {
   font-family: 'Indie Flower', cursive;
   font-size: 28px
 }
+
+.mdl-button {
+  text-transform: none;
+}

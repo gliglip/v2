@@ -16,7 +16,7 @@
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label {% if form.title.errors %}is-invalid{% endif %}">
           <input class="mdl-textfield__input" type="text" id="{{ form.title.id_for_label }}"
                   name="{{ form.title.html_name }}" value="{{ form.title.value }}">
-          <label class="mdl-textfield__label" for="{{ form.title.id_for_label }}">{{ form.title.label }}</label>
+          <label class="mdl-textfield__label" for="{{ form.title.id_for_label }}">{{ form.title.label }} {% if form.title.help_text %}( {{ form.title.help_text }} ){% endif %}</label>
           {% if form.title.errors %}
             <span class="mdl-textfield__error">{{ form.title.errors.pop }}</span>
           {% endif %}
@@ -28,7 +28,7 @@
                   name="{{ form.description.html_name }}">
             {{ form.description.value }}
           </textarea>
-          <label class="mdl-textfield__label" for="{{ form.description.id_for_label }}">{{ form.description.label }}</label>
+          <label class="mdl-textfield__label" for="{{ form.description.id_for_label }}">{{ form.description.label }} {% if form.description.help_text %}( {{ form.description.help_text }} ){% endif %}</label>
           {% if form.description.errors %}
             <span class="mdl-textfield__error">{{ form.description.errors.pop }}</span>
           {% endif %}
@@ -36,18 +36,18 @@
       </div>
       <div class="mdl-grid">
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label {% if form.location.errors %}is-invalid{% endif %}">
-          <textarea class="mdl-textfield__input" type="text" id="{{ form.location.id_for_label }}" rows="5"
-                  name="{{ form.location.html_name }}">
-            { "type": "Point", "coordinates": [ 1673053.675105937989429, 8379944.2849604440853 ] }
-          </textarea>
-          <label class="mdl-textfield__label" for="{{ form.location.id_for_label }}">{{ form.location.label }}</label>
+          <input class="mdl-textfield__input" type="text" id="{{ form.location.id_for_label }}"
+                  name="{{ form.location.html_name }}" value="{{ form.location.value }}">
+          <label class="mdl-textfield__label" for="{{ form.location.id_for_label }}">{{ form.location.label }} {% if form.location.help_text %}( {{ form.location.help_text }} ){% endif %}</label>
           {% if form.location.errors %}
             <span class="mdl-textfield__error">{{ form.location.errors.pop }}</span>
           {% endif %}
         </div>
       </div>
       <div class="mdl-grid">
-        <input class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit" value="Update">
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit">
+          <i class="material-icons">create</i> {% trans "Update details" %}
+        </button>
       </div>
     </form>
   </div>
